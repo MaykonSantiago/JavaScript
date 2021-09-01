@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        body {
+            background: blue;
+        }
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 70px;
+            text-align: center;
+        }
+
+        div#noturno{
+            font: normal 20pt Arial;
+            background: rgb(43, 40, 40);
+            color: white;
+            width: 200px;
+            height: 70px;
+            text-align: center
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div id = "area">
+        Interaja 
+    </div>
+
+    <div id = "noturno" onclick = "clicar()">
+        Modo noturno.
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        
+        
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function entrar() {
+            
+            a.innerHTML = 'q(0 0)p'
+        }
+
+        function sair() {
+            a.innerHTML = 'Interaja'
+        }
+
+        function clicar(noturno){
+            var fundo = window.document.body
+            fundo.style.background = 'black'
+        }
+        fundo.addEventListener('click', clicar)
+    </script>
+
+</body>
+</html>

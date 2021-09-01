@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+            background: rgb(25, 25, 218);
+            color: white;
+            font: normal 18pt arial;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando os estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em javascript</p>
+    <div id= "msg">clique em mim</div>
+
+    <script>
+        
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')
+
+        /*innerhtml seleciona o texto já com a formatação 
+          ineerText seleciona apenas o texto em formatação*/
+        window.document.write(p1.innerHTML)
+
+        //mudando a cor do paragrafo , p, selecionado
+        p1.style.color = 'orange' 
+
+        //mudando a cor de fundo do site
+        corpo.style.background = ' rgb(32, 25, 25)'
+
+        //mudando a cor da div pelo nome do id
+        d.style.background = 'green'
+
+        /*Este comando (window.document.querySelector('div#msg'))tbm tem função de pegar a div tanto pelo id
+        quanto pela classe. Para selecionar o id se usa '#', para selecionar classe se usa '.'*/
+
+        
+        
+
+    </script>
+</body>
+</html>

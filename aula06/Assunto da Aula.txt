@@ -1,0 +1,10 @@
+*Conversão de dados
+
+*Formatando String
+
+*Formatar números
+   var.toFixed(2) /* aparece os dois números depois do ponto*/
+   var.toFixed(2).replace('.' , ',') /*troca o ponto pela virgula*/
+   var.tolocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) /*formata o número para real*/ 
+
+
